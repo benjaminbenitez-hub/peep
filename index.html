@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDY AI - Asistente Inteligente</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">STUDY<span>AI.</span></div>
+
+        <div class="header-actions">
+            <button id="themeButton" class="theme-button">🌙</button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <span class="tag">TU ASISTENTE INTELIGENTE</span>
+            <h1>¡Hola! ¿Qué vamos a <span>aprender hoy?</span></h1>
+            <p>Preguntá, aprendé y descubrí nuevos conocimientos con inteligencia artificial.</p>
+        </section>
+
+        <section class="subject-section">
+            <h2>Seleccioná una materia</h2>
+
+            <div class="subjects">
+                <button class="subject active" data-subject="General">🌎 General</button>
+                <button class="subject" data-subject="Matemática">📐 Matemática</button>
+                <button class="subject" data-subject="Historia">📚 Historia</button>
+                <button class="subject" data-subject="Programación">💻 Programación</button>
+                <button class="subject" data-subject="Ciencias">🔬 Ciencias</button>
+                <button class="subject" data-subject="Inglés">🇬🇧 Inglés</button>
+            </div>
+        </section>
+
+        <section class="chat-container">
+
+            <div class="chat-header">
+                <div>
+                    <h2>🤖 Study Assistant</h2>
+                    <p>Asistente educativo con inteligencia artificial</p>
+                </div>
+
+                <button id="clearHistory" class="clear-button">
+                    🗑️ Limpiar
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages" aria-live="polite">
+
+                <div class="message bot">
+                    <div class="avatar">🤖</div>
+                    <div class="message-content">
+                        <strong>Study AI</strong>
+                        <p>¡Hola! Soy tu asistente de estudio. Elegí una materia y escribí tu pregunta. ¡Estoy listo para ayudarte!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <form id="chatForm" class="chat-form">
+
+                <textarea
+                    id="userInput"
+                    placeholder="Escribí tu pregunta aquí..."
+                    rows="2"
+                    maxlength="2000"
+                    required></textarea>
+
+                <div class="form-bottom">
+                    <span>Presioná Enter para enviar</span>
+
+                    <button type="submit" id="sendButton">
+                        Enviar ➤
+                    </button>
+                </div>
+
+            </form>
+
+            <p class="disclaimer">
+                Study AI puede cometer errores. Verificá la información importante.
+            </p>
+
+        </section>
+
+        <section class="tools-section">
+
+            <h2>Herramientas de estudio</h2>
+
+            <div class="tools-grid">
+
+                <button class="tool-card" data-prompt="Haceme un resumen claro y ordenado del siguiente tema: ">
+                    <span>📝</span>
+                    <h3>Crear resumen</h3>
+                    <p>Convertí información extensa en un resumen.</p>
+                </button>
+
+                <button class="tool-card" data-prompt="Creá 5 ejercicios de práctica sobre: ">
+                    <span>✏️</span>
+                    <h3>Generar ejercicios</h3>
+                    <p>Practicá con ejercicios y preguntas.</p>
+                </button>
+
+                <button class="tool-card" data-prompt="Explicame de manera sencilla y con ejemplos: ">
+                    <span>💡</span>
+                    <h3>Explicar un tema</h3>
+                    <p>Entendé temas difíciles paso a paso.</p>
+                </button>
+
+                <button class="tool-card" data-prompt="Traducí al inglés el siguiente texto y explicame las palabras importantes: ">
+                    <span>🌐</span>
+                    <h3>Traducir texto</h3>
+                    <p>Traducí y aprendé nuevos idiomas.</p>
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="history-section">
+            <h2>📖 Historial de la sesión</h2>
+            <div id="historyList">
+                <p class="empty-history">Todavía no hay consultas.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>STUDY<span>AI.</span></h2>
+        <p>Aprender nunca fue tan fácil.</p>
+        <p>Proyecto educativo desarrollado con HTML, CSS y JavaScript.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
